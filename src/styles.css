@@ -1,1 +1,177 @@
-/* You can add global styles to this file, and also import other style files */
+/* Variables globales */
+
+:root {
+    --primary-color: #da291c;
+    --secondary-color: #fff;
+    --accent-color: #da291c;
+    --black-color: #3b3938;
+    --primary-font: 'Poppins', sans-serif;
+    --font-small: clamp(0.68rem, 2.5vh, calc(2.5vh + 0.68rem));
+    --font-medium: clamp(0.8rem, 10vh, 1.5rem );
+    --font-large: clamp(1.5rem, 2vw, 3rem);
+    --font-xlarge: clamp(2rem, calc(4rem + 2vh), 8rem);
+    --space-xsmall: '12px';
+    --space-small: '24px';
+    --space-medium: '36px';
+    --space-large: '48px';
+    --space-xlarge: '60px';
+    --space-xxlarge: '72px';
+    --space-xxxlarge: '96px';
+    --container-web: '1200px';
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+html {
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+}
+body {
+    line-height: 1.5rem;
+}
+a {
+    text-decoration: none!important;
+    color: var(--accent-color);
+}
+
+header, footer {
+    box-sizing: border-box;
+    background: var(--black-color);
+    color: var(--secondary-color);
+    min-height: clamp(6.25rem, calc(10vh + 1.5rem), calc(30vh - 1.5rem));
+    padding: clamp(0.6rem, 1.5rem, calc(10vh - 1.5rem));
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.wrap {
+    max-width: var(--container-web);
+    margin-top: var(--space-large);
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    align-items: center;
+}
+header > .container-logo {
+    flex-basis: 20%;
+}
+.navbar {
+    flex-basis: 60%;
+    font-size: var(--font-large);
+}
+.navbar a,
+footer > section:not(.first-footer) a {
+    color: var(--secondary-color);
+    text-align: center;
+    font-size: var(--font-medium);
+}
+
+.navbar a:hover,
+footer a:hover
+{
+    color: var(--accent-color);
+}
+
+.navbar ul {
+    gap: 24px;
+}
+
+header > .container-rr-ss {
+    flex-basis: 20%;
+}
+
+h1,h2,h3 {
+    color: var(--primary-color);
+}
+
+p {
+    color: var(--black-color);
+    font-size: var(--font-medium);
+    line-height: 1.5rem;
+}
+
+footer p, footer span {
+    color: var(--secondary-color);
+}
+
+footer > .first-footer {
+    background-color: var(--black-color);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+footer > .second-footer {
+    position: relative;
+    box-sizing: border-box;
+    background-color: var(--black-color);
+    padding: clamp(0.6em, 2vh, calc(5vh + 1.5em)) 0px;
+    z-index: 2;
+}
+
+.small-font {
+    font-size: var(--font-small)!important;
+}
+
+footer > .second-footer p {
+    font-size: var(--font-small);
+}
+
+footer ul[role="navbar"] {
+    gap: clamp(20px, 5vw, calc(5vw + 1rem));
+}
